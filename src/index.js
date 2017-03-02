@@ -2,35 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import Element from './components/Element';
+import Layout from './components/Layout';
+import PropLayout from './components/PropLayout';
 import './index.css';
+import { Router, Route, hashHistory } from 'react-router';
 
 ReactDOM.render(
-  <App />,
+  <Router history={hashHistory}>
+    <Route path='/' component={App}>
+      <Route path='element(/:id_element)' component={Element}></Route>
+      <Route path='layout' component={Layout}></Route>
+      <Route path='proplayout' component={PropLayout}></Route>
+    </Route>
+  </Router>,
   document.getElementById('root')
-);
-
-ReactDOM.render(
-  <Element />,
-  document.getElementById('root3')
-);
-
-
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
-
-const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
-};
-
-const element = (
-  <h1>
-    Hello, {formatName(user)}!
-  </h1>
-);
-            
-ReactDOM.render(
-  element,
-  document.getElementById('root2')
 );
