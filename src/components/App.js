@@ -26,12 +26,12 @@ export default class App extends Component {
       "Article 5",
       "Article 6",
       
-    ].map((title, i) => <Article key={i} title={title} /> );
+    ].map((titleee, i) => <Article key={i} title={titleee} /> );
     
     return (
       <div className="App">
         <div className="App-header">
-          <a href="/">
+          <a href="#">
             <img src={logo} className="App-logo" alt="logo" />
           </a>
           <h2>Welcome to React</h2>
@@ -44,6 +44,8 @@ export default class App extends Component {
         <Link to="element"><button type="button" className="btn btn-primary">Element</button></Link>
         <Link to="layout"><button type="button" className="btn btn-primary">Layout</button></Link>
         <Link to="proplayout"><button type="button" className="btn btn-primary">PropLayout</button></Link>
+        <Link to="todos"><button type="button" className="btn btn-primary">Todos</button></Link>
+        
         {this.props.children}
           
         <div className="row">{Articles}</div> 

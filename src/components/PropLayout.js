@@ -15,7 +15,6 @@ export default class PropLayout extends React.Component {
   }
   
   render() {
-    
     return (
 			<div>
 				<Element changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
