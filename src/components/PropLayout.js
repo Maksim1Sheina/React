@@ -10,8 +10,8 @@ export default class PropLayout extends React.Component {
     }
   }
   
-  changeTitle(title){
-    this.setState({title});
+  changeTitle(titleee){
+    this.setState({title: titleee});
   }
   
   render() {
